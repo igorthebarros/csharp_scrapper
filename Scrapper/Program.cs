@@ -1,35 +1,40 @@
 ﻿using OpenQA.Selenium.Chrome;
+using Scrapper;
 using Scrapper.Services;
 
 Console.WriteLine("Hello, World!");
 
 try
 {
-    using var driver = new ChromeDriver();
-    var scrapper = new ScrapperService(driver);
+    var breakfast = new AsyncBreakfast();
 
-    var isConnected = scrapper.StartConnection();
+    await breakfast.MakeBreakfast();
+    await breakfast.MakeBreakfastAsync();
+    //using var driver = new ChromeDriver();
+    //var scrapper = new ScrapperService(driver);
 
-    if (!isConnected)
-        throw new Exception("Can't reach the website.");
+    //var isConnected = scrapper.StartConnection();
 
-    Console.WriteLine($"Connected: {isConnected}");
+    //if (!isConnected)
+    //    throw new Exception("Can't reach the website.");
 
-    var currentProductsUrl = scrapper.GetProductsUrls();
+    //Console.WriteLine($"Connected: {isConnected}");
 
-    var productsUrls = new List<string>();
+    //var currentProductsUrl = scrapper.GetProductsUrls();
 
-    if (currentProductsUrl.Count >= 1)
-        productsUrls.AddRange(currentProductsUrl);
+    //var productsUrls = new List<string>();
 
-    var nextPageBtn = scrapper.GetNextPageButton();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-    if(nextPageBtn != null)
-        nextPageBtn.Click();
-    else
-    {
-        //Call GetDetails
-    }
+    //if (currentProductsUrl.Count >= 1)
+    //    productsUrls.AddRange(currentProductsUrl);
+
+    //var nextPageBtn = scrapper.GetNextPageButton();
+
+    //if(nextPageBtn != null)
+    //    nextPageBtn.Click();
+    //else
+    //{
+    //    //Call GetDetails
+    //}
 }
 catch (Exception e)
 {
