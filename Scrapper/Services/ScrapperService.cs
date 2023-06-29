@@ -61,7 +61,7 @@ namespace Scrapper.Services
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error: Can not access stablish connection with {_loginUrl} - {ex.Message}");
+                throw new Exception($"Error: Can not stablish connection with {_loginUrl} - {ex.Message}");
             }
         }
 

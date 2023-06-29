@@ -5,7 +5,15 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scrapper", "Scrapper\Scrapper.csproj", "{617C5E50-54C8-4584-9B6C-5BB6BFC7BA0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{133AB498-2B3B-4A0E-AA5C-07EF9E7C27C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScrapperTest", "Tests\ScrapperTest.csproj", "{133AB498-2B3B-4A0E-AA5C-07EF9E7C27C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4D4A45B3-2546-4492-AF39-76779E305B78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{48CB1894-22F3-432B-B3C7-BA12B45B0FDB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{AC77B2EA-D73D-4AF2-AFCE-CF9CCC000A3E}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AF209F63-99BF-4FA5-87C3-BEE78C17AF0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +29,22 @@ Global
 		{133AB498-2B3B-4A0E-AA5C-07EF9E7C27C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{133AB498-2B3B-4A0E-AA5C-07EF9E7C27C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{133AB498-2B3B-4A0E-AA5C-07EF9E7C27C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC77B2EA-D73D-4AF2-AFCE-CF9CCC000A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC77B2EA-D73D-4AF2-AFCE-CF9CCC000A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC77B2EA-D73D-4AF2-AFCE-CF9CCC000A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC77B2EA-D73D-4AF2-AFCE-CF9CCC000A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF209F63-99BF-4FA5-87C3-BEE78C17AF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF209F63-99BF-4FA5-87C3-BEE78C17AF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF209F63-99BF-4FA5-87C3-BEE78C17AF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF209F63-99BF-4FA5-87C3-BEE78C17AF0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{617C5E50-54C8-4584-9B6C-5BB6BFC7BA0F} = {48CB1894-22F3-432B-B3C7-BA12B45B0FDB}
+		{133AB498-2B3B-4A0E-AA5C-07EF9E7C27C5} = {4D4A45B3-2546-4492-AF39-76779E305B78}
+		{AC77B2EA-D73D-4AF2-AFCE-CF9CCC000A3E} = {48CB1894-22F3-432B-B3C7-BA12B45B0FDB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF753A97-8EC8-4F55-B85F-436D8ECAA1C0}
