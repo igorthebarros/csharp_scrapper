@@ -72,13 +72,13 @@ namespace Scrapper.Services
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error: Can not stablish a connection with {_loginUrl} | Details: {ex.Message}");
+                throw new Exception($"Error: Can not stablish a connection with {loginUrl} | Details: {ex.Message}");
             }
         }
 
         public OdercoProductModel GetProduct()
         {
-            _driver.Navigate().GoToUrl(_collectiblesUrl);
+            _driver.Navigate().GoToUrl(collectiblesUrl);
 
             var productFullXPath = OdercoHtmlEnum.ProductMainElementXPath.GetDescription()
                         + $"[{1}]" + OdercoHtmlEnum.ProductAElementXPath.GetDescription();
