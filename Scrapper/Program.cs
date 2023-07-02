@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Scrapper.Services;
+using System.Threading;
 
 internal class Program
 {
@@ -20,21 +21,20 @@ internal class Program
 
             Console.WriteLine($"Connected: {isConnected}");
 
-            //var currentProductsUrl = scrapper.GetProductsUrls();
+            var productTest = scrapper.GetProduct();
 
-            //var productsUrls = new List<string>();
+            //var productsTask = Task.Run(() => scrapper.GetProductsAsync());
 
-            //if (currentProductsUrl.Count >= 1)
-            //    productsUrls.AddRange(currentProductsUrl);
+            //productsTask.Wait();
 
-            //var nextPageBtn = scrapper.GetNextPageButton();
+            //var consumerTask = Task.Run(() => consumerService.ExecuteAsync_Public(cancellationToken));
 
-            //if(nextPageBtn != null)
-            //    nextPageBtn.Click();
-            //else
-            //{
-            //    //Call GetDetails
-            //}
+            //await Task.Delay(10000);// Wait for a short time to allow the consumer service to start and enter the while loop
+
+            //cancellationTokenSource.Cancel();
+
+            ////Act
+            //await consumerTask;
         }
         catch (Exception e)
         {
